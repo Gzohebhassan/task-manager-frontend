@@ -6,7 +6,7 @@ const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api'; /
 // Register a new user
 export const registerUser = async (userData) => {
   try {
-    const response = await axios.post(`${BASE_URL}/register`, userData);
+    const response = await axios.post(`${BASE_URL}/users/register`, userData);
     return response;
   } catch (error) {
     console.error('Error registering user:', error);
@@ -17,7 +17,7 @@ export const registerUser = async (userData) => {
 // Login a user
 export const loginUser = async (credentials) => {
   try {
-    const response = await axios.post(`${BASE_URL}/login`, credentials);
+    const response = await axios.post(`${BASE_URL}/users/login`, credentials);
     return response;
   } catch (error) {
     console.error('Error logging in user:', error);
