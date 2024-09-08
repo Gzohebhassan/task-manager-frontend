@@ -1,0 +1,143 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9; /* Light background for the whole page */
+}
+
+/* Task Board Container */
+.task-board {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #007bff; /* Blue border around the task board */
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for better contrast */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 1200px; /* Max width for better layout control */
+    width: 100%;
+}
+
+/* Header Styling */
+.task-board-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+/* Search Input Styling */
+.task-search {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.task-search:focus {
+    border-color: #0056b3; /* Darker blue when focused */
+}
+
+/* Logout Button Styling */
+.logout-btn {
+    padding: 10px 20px;
+    background-color: #dc3545; /* Red background for logout */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Task Columns Container */
+.task-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px; /* Space between columns */
+}
+
+/* Column Styling */
+.column {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    min-height: 400px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd; /* Subtle border around columns */
+}
+
+/* Task Styling */
+.task {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    cursor: move;
+    transition: box-shadow 0.3s;
+}
+
+.task:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Task Actions Styling */
+.task-actions {
+    margin-top: 10px;
+}
+
+/* Action Buttons Styling */
+.task-edit-btn,
+.task-delete-btn {
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.task-edit-btn {
+    background-color: #007bff; /* Blue background for edit */
+    color: white;
+}
+
+.task-edit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.task-delete-btn {
+    background-color: #dc3545; /* Red background for delete */
+    color: white;
+}
+
+.task-delete-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Add Task Button Styling */
+.add-task-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green background for add task */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-task-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
