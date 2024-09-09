@@ -1,5 +1,6 @@
 /* General Page Styling */
-body {
+html, body {
+    height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f6f9; /* Light background for the whole page */
@@ -7,6 +8,7 @@ body {
 
 /* Task Board Container */
 .task-board {
+    min-height: 100vh; /* Full viewport height */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -17,6 +19,7 @@ body {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     max-width: 1200px; /* Max width for better layout control */
     width: 100%;
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 /* Header Styling */
@@ -63,6 +66,7 @@ body {
     justify-content: space-between;
     width: 100%;
     gap: 20px; /* Space between columns */
+    flex-wrap: wrap; /* Wrap columns to the next line if needed */
 }
 
 /* Column Styling */
@@ -74,6 +78,7 @@ body {
     min-height: 400px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd; /* Subtle border around columns */
+    margin-bottom: 20px; /* Space between columns vertically */
 }
 
 /* Task Styling */
