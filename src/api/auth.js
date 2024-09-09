@@ -6,7 +6,11 @@ const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api'; /
 // Register a new user
 export const registerUser = async (userData) => {
   try {
-    const response = await axios.post(`${BASE_URL}/api/users/register`, userData);
+    const response = await axios.post(`${BASE_URL}/api/users/register`, userData, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
     return response;
   } catch (error) {
     console.error('Error registering user:', error);
