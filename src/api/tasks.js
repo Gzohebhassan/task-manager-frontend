@@ -8,7 +8,7 @@ const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 export const fetchTasks = async () => {
     try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`${BASE_URL}/api/tasks`, {
+        const response = await axios.get(`${BASE_URL}/api/task/tasks`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -23,7 +23,7 @@ export const fetchTasks = async () => {
 // Create a new task
 export const createTask = async (task, token) => {
   try {
-    const response = await axios.post(`${BASE_URL}/api/tasks`, task, {
+    const response = await axios.post(`${BASE_URL}/api/task/tasks`, task, {
         headers: {
             'Authorization': `Bearer ${token}`, // Include token in headers
             'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ export const createTask = async (task, token) => {
 export const updateTask = async (taskId, updatedData, token) => {
     try {
         const response = await axios.put(
-            `${BASE_URL}/api/tasks/${taskId}`,
+            `${BASE_URL}/api/task/tasks/${taskId}`,
             updatedData,
             {
                 headers: {
@@ -60,7 +60,7 @@ export const updateTask = async (taskId, updatedData, token) => {
 export const deleteTask = async (taskId, token) => {
   try {
     const response = await axios.delete(
-        `${BASE_URL}/api/tasks/${taskId}`,
+        `${BASE_URL}/api/task/tasks/${taskId}`,
         {
             headers: {
                 'Authorization': `Bearer ${token}`, // Include token in headers
